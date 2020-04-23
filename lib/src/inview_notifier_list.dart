@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inview_notifier_list/src/inview_notifier.dart';
+import 'package:preload_page_view/preload_page_view.dart';
 
 import 'inherited_inview_widget.dart';
 import 'inview_state.dart';
@@ -39,15 +40,12 @@ class InViewNotifierList extends InViewNotifier {
           throttleDuration: throttleDuration,
           contextCacheCount: contextCacheCount,
           isInViewPortCondition: isInViewPortCondition,
-          child: ListView.builder(
-            padding: padding,
+          child: PreloadPageView.builder(
             controller: controller,
             scrollDirection: scrollDirection,
             physics: physics,
             reverse: reverse,
-            primary: primary,
-            addAutomaticKeepAlives: addAutomaticKeepAlives,
-            shrinkWrap: shrinkWrap,
+            preloadPagesCount: itemCount,
             itemCount: itemCount,
             itemBuilder: builder,
           ),

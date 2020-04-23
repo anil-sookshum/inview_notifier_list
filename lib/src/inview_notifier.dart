@@ -14,7 +14,7 @@ class InViewNotifier extends StatefulWidget {
   final List<String> initialInViewIds;
 
   ///The widget that should be displayed in the [InViewNotifier].
-  final ScrollView child;
+  final dynamic child;
 
   ///The number of widget's contexts the InViewNotifier should stored/cached for
   ///the calculations thats needed to be done to check if the widgets are inView or not.

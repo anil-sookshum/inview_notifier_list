@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   stream_transform: ^1.1.0
-
+  preload_page_view:
 dev_dependencies:
   flutter_driver:
     sdk: flutter
