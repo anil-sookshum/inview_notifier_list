@@ -40,11 +40,12 @@ class InViewNotifierList extends InViewNotifier {
           throttleDuration: throttleDuration,
           contextCacheCount: contextCacheCount,
           isInViewPortCondition: isInViewPortCondition,
-          child: PageView.builder(
+          child: PreloadPageView.builder(
             controller: controller,
             scrollDirection: scrollDirection,
             physics: physics,
             reverse: reverse,
+            preloadPagesCount: 1,
             itemCount: itemCount,
             itemBuilder: builder,
             
